@@ -4,10 +4,12 @@ public class Transportation {
     private String type;
     private double time;
     private double distance;
+    private static double totalDistance = 0;
     public Transportation(String setType, double setTime, double setDistance) {
         type = setType;
         time = setTime;
         distance = setDistance;
+        totalDistance += distance;
 
     }
     public boolean ifCar(String type) {
@@ -27,5 +29,8 @@ public class Transportation {
     }
     public double getDistance() {
         return distance;
+    }
+    public double getTotalDistance() {
+        return totalDistance;
     }
 }
