@@ -19,4 +19,29 @@ public class Car extends Transportation {
     public double getCarDistance() {
         return carDistance;
     }
+
+    @Override
+    public double getTime() {
+        return super.getTime();
+    }
+
+    @Override
+    public double getTotalDistance() {
+        return super.getTotalDistance();
+    }
+
+    @Override
+    public double getDistance() {
+        return super.getDistance();
+    }
+
+    @Override
+    public boolean ifCar(String type) {
+        return super.ifCar(type);
+    }
+
+    @Override
+    public String getType() {
+        return super.getType();
+    }
 }
