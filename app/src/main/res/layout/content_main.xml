@@ -25,8 +25,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Car"
-        tools:layout_editor_absoluteX="33dp"
-        tools:layout_editor_absoluteY="259dp" />
+        tools:layout_editor_absoluteX="59dp"
+        tools:layout_editor_absoluteY="366dp" />
 
     <Button
         android:id="@+id/walking"
@@ -34,7 +34,7 @@
         android:layout_height="wrap_content"
         android:text="walking"
         tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="259dp" />
+        tools:layout_editor_absoluteY="173dp" />
 
     <Button
         android:id="@+id/publicTransportation"
@@ -42,13 +42,13 @@
         android:layout_height="wrap_content"
         android:text="Public Transportation"
         tools:layout_editor_absoluteX="106dp"
-        tools:layout_editor_absoluteY="373dp" />
+        tools:layout_editor_absoluteY="709dp" />
 
     <Button
         android:id="@+id/Bike"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Bike"
-        tools:layout_editor_absoluteX="291dp"
-        tools:layout_editor_absoluteY="259dp" />
+        tools:layout_editor_absoluteX="268dp"
+        tools:layout_editor_absoluteY="366dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
