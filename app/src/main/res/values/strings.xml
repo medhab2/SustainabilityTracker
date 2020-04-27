@@ -13,4 +13,5 @@
     <string name="public_transportation">Public Transportation</string>
     <string name="car">Car</string>
     <string name="walk">Walk</string>
+    <string name="calendar">Calendar</string>
 </resources>
