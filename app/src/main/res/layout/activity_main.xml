@@ -18,6 +18,30 @@
             android:background="?attr/colorPrimary"
             app:popupTheme="@style/AppTheme.PopupOverlay" />
 
+        <Button
+            android:id="@+id/car"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/car" />
+
+        <Button
+            android:id="@+id/walk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/walk" />
+
+        <Button
+            android:id="@+id/bike"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/bike" />
+
+        <Button
+            android:id="@+id/publicTransit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/public_transportation" />
+
     </com.google.android.material.appbar.AppBarLayout>
 
     <include layout="@layout/content_main" />
