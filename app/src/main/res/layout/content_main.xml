@@ -13,42 +13,11 @@
         android:layout_height="0dp"
         app:defaultNavHost="true"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
         app:navGraph="@navigation/nav_graph" />
 
-    <Button
-        android:id="@+id/Car"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Car"
-        tools:layout_editor_absoluteX="59dp"
-        tools:layout_editor_absoluteY="366dp" />
-
-    <Button
-        android:id="@+id/walking"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="walking"
-        tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="173dp" />
-
-    <Button
-        android:id="@+id/publicTransportation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Public Transportation"
-        tools:layout_editor_absoluteX="106dp"
-        tools:layout_editor_absoluteY="709dp" />
-
-    <Button
-        android:id="@+id/Bike"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Bike"
-        tools:layout_editor_absoluteX="268dp"
-        tools:layout_editor_absoluteY="366dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
