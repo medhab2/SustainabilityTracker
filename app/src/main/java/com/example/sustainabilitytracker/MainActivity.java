@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         Button car = findViewById(R.id.car);
         car.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, Activity.class));
+                startActivity(new Intent(MainActivity.this, CarActivity.class));
                 //change to the car screen and enter the information
             }
         });
