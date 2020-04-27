@@ -1,4 +1,6 @@
 package com.example.sustainabilitytracker;
 
-public class Activity {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class Activity extends AppCompatActivity {
 }
