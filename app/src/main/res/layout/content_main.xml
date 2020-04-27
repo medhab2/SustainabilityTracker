@@ -24,8 +24,10 @@
         android:id="@+id/Car"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="-16dp"
+        android:layout_marginLeft="-16dp"
         android:text="Car"
-        tools:layout_editor_absoluteX="59dp"
+        app:layout_constraintStart_toEndOf="@+id/nav_host_fragment"
         tools:layout_editor_absoluteY="366dp" />
 
     <Button
