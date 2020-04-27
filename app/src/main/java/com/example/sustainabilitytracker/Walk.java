@@ -1,39 +1,24 @@
 package com.example.sustainabilitytracker;
 
-import androidx.annotation.Nullable;
-
 public class Walk extends Transportation {
+    private static final double averageTime = -1;
+    private static final double averageDistance = -1;
     public Walk(String setType, double setTime, double setDistance) {
         super(setType, setTime, setDistance);
     }
-
-    @Override
-    public String getType() {
-        return super.getType();
+    public static double getAverageTime() {
+        return averageTime;
     }
-
-    @Override
-    public boolean ifCar(String type) {
-        return super.ifCar(type);
+    public static double getAverageDistance() {
+        return averageDistance;
     }
-
-    @Override
-    public double getDistance() {
-        return super.getDistance();
-    }
-
-    @Override
-    public double getTotalDistance() {
-        return super.getTotalDistance();
-    }
-
-    @Override
     public double getTime() {
         return super.getTime();
     }
-
-    @Override
-    public boolean equals(@Nullable Object obj) {
-        return super.equals(obj);
+    public double getDistance() {
+        return super.getDistance();
+    }
+    public String getType() {
+        return super.getType();
     }
 }
