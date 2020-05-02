@@ -39,6 +39,27 @@ public class MainActivity extends AppCompatActivity {
                 //change to the car screen and enter the information
             }
         });
+        Button bike = findViewById(R.id.bike);
+        bike.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, BikeActivity.class));
+                //change to the bike screen and enter the information
+            }
+        });
+        Button walk = findViewById(R.id.walk);
+        walk.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, WalkActivity.class));
+                //change to the walk screen and enter the information
+            }
+        });
+        Button publicTransportation = findViewById(R.id.publicTransit);
+        publicTransportation.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, PublicTransportationActivity.class));
+                //change to the public transportation screen and enter the information
+            }
+        });
     }
 
     @Override
