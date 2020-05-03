@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.widget.EditText;
 
 public class PublicTransportationActivity extends AppCompatActivity {
+    private PublicTransportation transportation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -14,5 +15,11 @@ public class PublicTransportationActivity extends AppCompatActivity {
         EditText text = findViewById(R.id.publicTransitTime);
         String temp = text.getText().toString();
         double time = Double.parseDouble(temp);
+        EditText text1 = findViewById(R.id.publicTransitDistance);
+        temp = text1.getText().toString();
+        double distance = Double.parseDouble(temp);
+        EditText text2 = findViewById(R.id.publicTransitType);
+        String type = text2.getText().toString();
+        transportation = new PublicTransportation(type, time, distance);
     }
 }

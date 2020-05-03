@@ -21,4 +21,7 @@
     <string name="plane">plane</string>
     <string name="bus">bus</string>
     <string name="button">Button</string>
+    <string name="enter_time">Enter Time</string>
+    <string name="enter_distance">Enter Distance</string>
+    <string name="enter_transportation_type">Enter Transportation Type</string>
 </resources>
