@@ -2,7 +2,22 @@ package com.example.sustainabilitytracker;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Bitmap;
+import android.media.Image;
 import android.os.Bundle;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.Response.ErrorListener;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.ImageRequest;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+
+import org.w3c.dom.Text;
 
 public class CarActivity extends AppCompatActivity {
 
@@ -10,5 +25,23 @@ public class CarActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_car);
+    }
+    public void makeRequest() {
+        final ImageView imageView;
+        RequestQueue queue = Volley.newRequestQueue(this);
+        String url = "https://picsum.photos/id/237/200/300";
+        imageView = (ImageView) findViewById(R.id.image);
+// Retrieves an image specified by the URL, displays it in the UI.
+        ImageRequest request = new ImageRequest(url,
+                new Response.Listener<Bitmap>() {
+                    @Override
+                    public void onResponse(Bitmap bitmap) {
+                        imageView.setImageBitmap(bitmap);
+                    }
+                }, 0, 0, null,
+                null);
+// Access the RequestQueue through your singleton class.
+        queue.add(request);
+
     }
 }
