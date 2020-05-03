@@ -29,7 +29,7 @@ public class CarActivity extends AppCompatActivity {
     public void makeRequest() {
         final ImageView imageView;
         RequestQueue queue = Volley.newRequestQueue(this);
-        String url = "https://picsum.photos/id/237/200/300";
+        String url = "https://picsum.photos/id/382/200/300";
         imageView = (ImageView) findViewById(R.id.image);
 // Retrieves an image specified by the URL, displays it in the UI.
         ImageRequest request = new ImageRequest(url,
@@ -38,7 +38,7 @@ public class CarActivity extends AppCompatActivity {
                     public void onResponse(Bitmap bitmap) {
                         imageView.setImageBitmap(bitmap);
                     }
-                }, 0, 0, null,
+                }, 200,300, null,
                 null);
 // Access the RequestQueue through your singleton class.
         queue.add(request);
