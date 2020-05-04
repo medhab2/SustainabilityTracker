@@ -28,7 +28,6 @@ public class CarActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_car);
-        makeRequest();
     }
     public void makeRequest() {
         RequestQueue queue = Volley.newRequestQueue(this);
