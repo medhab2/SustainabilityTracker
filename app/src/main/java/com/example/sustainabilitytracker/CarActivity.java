@@ -41,7 +41,11 @@ public class CarActivity extends AppCompatActivity {
                         imageView.setImageBitmap(bitmap);
                     }
                 }, 200,300, null,
-                null);
+                new Response.ErrorListener() {
+                    public void onErrorResponse(VolleyError error) {
+                        System.out.print(error.getMessage());
+                    }
+                });
         queue.add(request);
 
     }
