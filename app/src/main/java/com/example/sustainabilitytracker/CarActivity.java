@@ -58,12 +58,14 @@ public class CarActivity extends AppCompatActivity {
                         imageView.setImageBitmap(bitmap);
                         textView.setVisibility(View.VISIBLE);
                         textView.setText("It's running!");
+                        Log.d("tag", "Request successful!");
                     }
                 }, 200,300, null,
                 new Response.ErrorListener() {
                     public void onErrorResponse(VolleyError error) {
                         textView.setVisibility(View.VISIBLE);
                         textView.setText(error.getMessage());
+                        Log.d("tag", "Request unsuccessful!");
                     }
                 });
         queue.add(request);
