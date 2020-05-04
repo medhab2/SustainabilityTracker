@@ -42,6 +42,5 @@ public class CarActivity extends AppCompatActivity {
                 null);
 // Access the RequestQueue through your singleton class.
         queue.add(request);
-
     }
 }
