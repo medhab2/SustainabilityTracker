@@ -42,7 +42,6 @@ public class BikeActivity extends AppCompatActivity {
         RequestQueue queue = Volley.newRequestQueue(this);
         String url = "https://picsum.photos/id/1077/200/300";
         final ImageView imageView = (ImageView) findViewById(R.id.bikeView);
-
 // Retrieves an image specified by the URL, displays it in the UI.
         ImageRequest request = new ImageRequest(url,
                 new Response.Listener<Bitmap>() {
