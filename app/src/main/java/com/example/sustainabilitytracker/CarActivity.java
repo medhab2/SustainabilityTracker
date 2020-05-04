@@ -72,5 +72,6 @@ public class CarActivity extends AppCompatActivity {
             carpool = false;
         }
         car = new Car("car", time, distance, power, carpool);
+        System.out.println(car.getDistance() + " " + car.getTime());
     }
 }
