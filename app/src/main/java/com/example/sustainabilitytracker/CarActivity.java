@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.graphics.Bitmap;
 import android.media.Image;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -25,6 +26,7 @@ public class CarActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_car);
+        makeRequest();
     }
     public void makeRequest() {
         final ImageView imageView;
@@ -40,7 +42,6 @@ public class CarActivity extends AppCompatActivity {
                     }
                 }, 200,300, null,
                 null);
-// Access the RequestQueue through your singleton class.
         queue.add(request);
 
     }
