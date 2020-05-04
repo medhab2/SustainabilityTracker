@@ -6,6 +6,7 @@ import android.graphics.Bitmap;
 import android.media.Image;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -28,6 +29,7 @@ public class CarActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_car);
+        makeRequest();
     }
     public void makeRequest() {
         RequestQueue queue = Volley.newRequestQueue(this);
@@ -41,9 +43,9 @@ public class CarActivity extends AppCompatActivity {
                     public void onResponse(Bitmap bitmap) {
                         imageView.setImageBitmap(bitmap);
                         textView.setText("It's running!");
-                        System.out.println("It's running!");
+                        imageView.setVisibility(View.VISIBLE);
                     }
-                }, 0,0, null,
+                }, 200,300, null,
                 new Response.ErrorListener() {
                     public void onErrorResponse(VolleyError error) {
                         textView.setText(error.getMessage());
