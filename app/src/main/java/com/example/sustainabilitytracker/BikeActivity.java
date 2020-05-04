@@ -24,6 +24,7 @@ public class BikeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bike);
+        makeRequest();
         Button enter = findViewById(R.id.enterBike);
         enter.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
