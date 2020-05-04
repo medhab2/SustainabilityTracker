@@ -33,20 +33,22 @@ public class CarActivity extends AppCompatActivity {
     public void makeRequest() {
         RequestQueue queue = Volley.newRequestQueue(this);
         String url = "https://picsum.photos/id/382/200/300";
-        final ImageView imageView = (ImageView) findViewById(R.id.image);
+        final ImageView imageView = (ImageView) findViewById(R.id.imageView);
         final TextView textView = (TextView) findViewById(R.id.text);
 // Retrieves an image specified by the URL, displays it in the UI.
         ImageRequest request = new ImageRequest(url,
                 new Response.Listener<Bitmap>() {
                     @Override
                     public void onResponse(Bitmap bitmap) {
-                        imageView.setImageBitmap(bitmap);
-                        textView.setText("It's running!");
                         imageView.setVisibility(View.VISIBLE);
+                        imageView.setImageBitmap(bitmap);
+                        textView.setVisibility(View.VISIBLE);
+                        textView.setText("It's running!");
                     }
                 }, 200,300, null,
                 new Response.ErrorListener() {
                     public void onErrorResponse(VolleyError error) {
+                        textView.setVisibility(View.VISIBLE);
                         textView.setText(error.getMessage());
                     }
                 });
