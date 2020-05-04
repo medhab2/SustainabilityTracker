@@ -12,15 +12,16 @@ public class PublicTransportationActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_public_transportation);
-
-        EditText text = findViewById(R.id.publicTransitTime);
-        String temp = text.getText().toString();
-        double time = Double.parseDouble(temp);
-        EditText text1 = findViewById(R.id.publicTransitDistance);
-        String tmp = text1.getText().toString();
-        double distance = Double.parseDouble(tmp);
-        EditText text2 = findViewById(R.id.publicTransitType);
-        String type = text2.getText().toString();
+    }
+    public void createTransportation() {
+        EditText editText = findViewById(R.id.publicTransitTime);
+        String t = editText.getText().toString();
+        double time = Double.parseDouble(t);
+        EditText editText1 = findViewById(R.id.publicTransitDistance);
+        String d = editText1.getText().toString();
+        double distance = Double.parseDouble(d);
+        EditText editText2 = findViewById(R.id.publicTransitType);
+        String type = editText2.getText().toString().toLowerCase();
         transportation = new PublicTransportation(type, time, distance);
     }
 }

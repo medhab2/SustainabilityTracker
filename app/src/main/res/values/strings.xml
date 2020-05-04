@@ -24,4 +24,10 @@
     <string name="enter_time">Enter Time</string>
     <string name="enter_distance">Enter Distance</string>
     <string name="enter_transportation_type">Enter Transportation Type</string>
+    <string name="enter_time_in_hours">Enter Time In Hours</string>
+    <string name="enter_distance_in_miles">Enter Distance in Miles</string>
+    <string name="enter_type_of_transportation">Enter Type of Transportation</string>
+    <string name="transportation_type">Transportation_Type</string>
+    <string name="enter_electric_gas_etc">Enter Electric, Gas etc.</string>
+    <string name="did_you_carpool_yes_or_no">Did you carpool? (Yes or No)</string>
 </resources>
