@@ -43,7 +43,7 @@ public class CarActivity extends AppCompatActivity {
                         textView.setText("It's running!");
                         System.out.println("It's running!");
                     }
-                }, 200,300, null,
+                }, 0,0, null,
                 new Response.ErrorListener() {
                     public void onErrorResponse(VolleyError error) {
                         textView.setText(error.getMessage());
