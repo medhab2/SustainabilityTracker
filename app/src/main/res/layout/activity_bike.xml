@@ -6,6 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".BikeActivity">
 
+    <ImageView
+        android:id="@+id/bikeView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_launcher_foreground" />
+
     <EditText
         android:id="@+id/bikeTime"
         android:layout_width="wrap_content"
