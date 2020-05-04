@@ -1,5 +1,6 @@
 package com.example.sustainabilitytracker;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.graphics.Bitmap;
@@ -7,6 +8,7 @@ import android.media.Image;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -29,7 +31,18 @@ public class CarActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_car);
-        makeRequest();
+        Button enter = findViewById(R.id.enterCar);
+        enter.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                createCar();
+                AlertDialog.Builder builder = new AlertDialog.Builder(getApplicationContext());
+                builder.setMessage("Total Distance Traveled: " + car.getTotalDistance());
+                builder.setOnDismissListener(unused -> {
+                    finish();
+                });
+                builder.create().show();
+            }
+        });
     }
     public void makeRequest() {
         RequestQueue queue = Volley.newRequestQueue(this);
@@ -71,5 +84,6 @@ public class CarActivity extends AppCompatActivity {
             carpool = false;
         }
         car = new Car("car", time, distance, power, carpool);
+        System.out.println(car.getDistance() + " " + car.getTime());
     }
 }

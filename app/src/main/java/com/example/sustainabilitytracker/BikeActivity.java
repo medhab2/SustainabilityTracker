@@ -2,18 +2,8 @@ package com.example.sustainabilitytracker;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.graphics.Bitmap;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.TextView;
-
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.ImageRequest;
-import com.android.volley.toolbox.Volley;
 
 public class BikeActivity extends AppCompatActivity {
     private Bike bike;
@@ -23,7 +13,6 @@ public class BikeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bike);
     }
-
     public void createBike() {
         EditText editText = findViewById(R.id.bikeTime);
         String t = editText.getText().toString();

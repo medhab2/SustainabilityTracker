@@ -16,16 +16,13 @@
         android:layout_marginEnd="105dp"
         android:layout_marginRight="105dp"
         android:layout_marginBottom="494dp"
-        android:autofillHints=""
         android:ems="10"
         android:inputType="textPersonName"
         android:text="@string/enter_time_in_hours"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/bikeDistance"
@@ -44,5 +41,4 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
