@@ -41,13 +41,15 @@ public class CarActivity extends AppCompatActivity {
                 new Response.Listener<Bitmap>() {
                     @Override
                     public void onResponse(Bitmap bitmap) {
-                        imageView.setImageBitmap(bitmap);
-                        textView.setText("It's running!");
                         imageView.setVisibility(View.VISIBLE);
+                        imageView.setImageBitmap(bitmap);
+                        textView.setVisibility(View.VISIBLE);
+                        textView.setText("It's running!");
                     }
                 }, 200,300, null,
                 new Response.ErrorListener() {
                     public void onErrorResponse(VolleyError error) {
+                        textView.setVisibility(View.VISIBLE);
                         textView.setText(error.getMessage());
                     }
                 });
