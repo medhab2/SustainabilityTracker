@@ -35,6 +35,7 @@ public class CarActivity extends AppCompatActivity {
         RequestQueue queue = Volley.newRequestQueue(this);
         String url = "https://picsum.photos/id/382/200/300";
         imageView = (ImageView) findViewById(R.id.image);
+        final TextView textView = (TextView) findViewById(R.id.text);
 // Retrieves an image specified by the URL, displays it in the UI.
         ImageRequest request = new ImageRequest(url,
                 new Response.Listener<Bitmap>() {
@@ -45,7 +46,7 @@ public class CarActivity extends AppCompatActivity {
                 }, 200,300, null,
                 new Response.ErrorListener() {
                     public void onErrorResponse(VolleyError error) {
-                        System.out.print(error.getMessage());
+                        textView.setText(error.getMessage());
                     }
                 });
         queue.add(request);
