@@ -30,9 +30,8 @@ public class BikeActivity extends AppCompatActivity {
                 createBike();
                 AlertDialog.Builder builder = new AlertDialog.Builder(getApplicationContext());
                 builder.setMessage("Total Distance Traveled: " + bike.getTotalDistance());
-                builder.setOnDismissListener(unused -> {
-                    finish();
-                });
+                builder.setNegativeButton("Close", null);
+                builder.setView(view);
                 builder.create().show();
             }
         });
