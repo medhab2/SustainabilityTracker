@@ -31,6 +31,7 @@ public class CarActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_car);
+        makeRequest();
         Button enter = findViewById(R.id.enterCar);
         enter.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
@@ -47,7 +48,7 @@ public class CarActivity extends AppCompatActivity {
     public void makeRequest() {
         RequestQueue queue = Volley.newRequestQueue(this);
         String url = "https://picsum.photos/id/382/200/300";
-        final ImageView imageView = (ImageView) findViewById(R.id.imageView);
+        final ImageView imageView = (ImageView) findViewById(R.id.carView);
         final TextView textView = (TextView) findViewById(R.id.text);
 // Retrieves an image specified by the URL, displays it in the UI.
         ImageRequest request = new ImageRequest(url,
