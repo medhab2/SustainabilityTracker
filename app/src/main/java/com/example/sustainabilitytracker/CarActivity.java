@@ -31,10 +31,9 @@ public class CarActivity extends AppCompatActivity {
         makeRequest();
     }
     public void makeRequest() {
-        final ImageView imageView;
         RequestQueue queue = Volley.newRequestQueue(this);
         String url = "https://picsum.photos/id/382/200/300";
-        imageView = (ImageView) findViewById(R.id.image);
+        final ImageView imageView = (ImageView) findViewById(R.id.image);
         final TextView textView = (TextView) findViewById(R.id.text);
 // Retrieves an image specified by the URL, displays it in the UI.
         ImageRequest request = new ImageRequest(url,
