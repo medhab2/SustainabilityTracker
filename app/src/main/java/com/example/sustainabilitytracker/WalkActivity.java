@@ -28,7 +28,6 @@ public class WalkActivity extends AppCompatActivity {
         RequestQueue queue = Volley.newRequestQueue(this);
         String url = "https://picsum.photos/id/342/200/300";
         final ImageView imageView = (ImageView) findViewById(R.id.walkView);
-        final TextView textView = (TextView) findViewById(R.id.text);
 // Retrieves an image specified by the URL, displays it in the UI.
         ImageRequest request = new ImageRequest(url,
                 new Response.Listener<Bitmap>() {
@@ -38,12 +37,7 @@ public class WalkActivity extends AppCompatActivity {
                         imageView.setImageBitmap(bitmap);
                     }
                 }, 200,300, null,
-                new Response.ErrorListener() {
-                    public void onErrorResponse(VolleyError error) {
-                        textView.setVisibility(View.VISIBLE);
-                        textView.setText(error.getMessage());
-                    }
-                });
+                null);
         queue.add(request);
     }
     public void createWalk() {
