@@ -76,6 +76,6 @@ public class WalkActivity extends AppCompatActivity {
         EditText editText1 = findViewById(R.id.walkDistance);
         String d = editText1.getText().toString();
         double distance = Double.parseDouble(d);
-        walk = new Walk("bike", time, distance);
+        walk = new Walk("walk", time, distance);
     }
 }
