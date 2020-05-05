@@ -29,17 +29,14 @@ public class CarActivity extends AppCompatActivity {
         enter.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 createCar();
-                System.out.println("hi");
                 AlertDialog.Builder builder = new AlertDialog.Builder(CarActivity.this);
-                builder.setMessage("Total Distance Driven: " + car.getTotalDistance() + " miles");
+                builder.setMessage("Total Distance Driven: " + car.getCarDistance() + " miles");
                 builder.setNegativeButton("Close", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                     }
                 });
-                System.out.println("yo");
                 builder.create().show();
-                System.out.println("lol");
             }
         });
         Button back = findViewById(R.id.backCar);
@@ -74,6 +71,5 @@ public class CarActivity extends AppCompatActivity {
         String d = editText1.getText().toString();
         double distance = Double.parseDouble(d);
         car = new Car("car", time, distance);
-        System.out.println(car.getDistance() + " " + car.getTime());
     }
 }

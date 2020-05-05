@@ -4,9 +4,19 @@ public class PublicTransportation extends Transportation {
     private boolean isBus;
     private boolean isTrain;
     private boolean isPlane;
+    private static double busDistance = 0;
+    private static double planeDistance = 0;
+    private static double trainDistance = 0;
     public PublicTransportation(String setType, double setTime, double setDistance) {
         super(setType, setTime, setDistance);
         publicType(setType);
+        if (setType.equals("bus")) {
+            busDistance += setDistance;
+        } else if (setType.equals("plane")) {
+            planeDistance += setDistance;
+        } else if (setType.equals("train")) {
+            trainDistance += setDistance;
+        }
     }
     public void publicType(String type) {
         if (type.equals("bus")) {
@@ -27,5 +37,14 @@ public class PublicTransportation extends Transportation {
             isPlane = false;
             System.out.println("Please enter a valid Public Transportation type");
         }
+    }
+    public double getBusDistance() {
+        return busDistance;
+    }
+    public double getPlaneDistance() {
+        return planeDistance;
+    }
+    public double getTrainDistance() {
+        return trainDistance;
     }
 }

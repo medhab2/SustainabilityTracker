@@ -31,17 +31,17 @@ public class PublicTransportationActivity extends AppCompatActivity {
         enter.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 createTransportation();
-                System.out.println("hi");
                 AlertDialog.Builder builder = new AlertDialog.Builder(PublicTransportationActivity.this);
-                builder.setMessage("Total Distance Travelled: " + transportation.getTotalDistance() + " miles");
+                builder.setMessage("Total Distance Travelled: " + transportation.getTotalDistance() + " miles" + "\n"
+                        + "Total Distance by Plane: " + transportation.getPlaneDistance() + " miles" + "\n"
+                        + "Total Distance by Train: " + transportation.getTrainDistance() + " miles" + "\n"
+                        + "Total Distance by Bus: " + transportation.getBusDistance() + " miles");
                 builder.setNegativeButton("Close", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                     }
                 });
-                System.out.println("yo");
                 builder.create().show();
-                System.out.println("lol");
             }
         });
         Button back = findViewById(R.id.backTransit);
@@ -75,6 +75,9 @@ public class PublicTransportationActivity extends AppCompatActivity {
         double distance = Double.parseDouble(d);
         EditText editText2 = findViewById(R.id.publicTransitType);
         String type = editText2.getText().toString().toLowerCase();
+        if (type.equals("airplane")) {
+            type = "plane";
+        }
         transportation = new PublicTransportation(type, time, distance);
     }
 }
