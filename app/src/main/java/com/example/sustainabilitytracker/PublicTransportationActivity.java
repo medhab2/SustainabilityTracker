@@ -42,7 +42,6 @@ public class PublicTransportationActivity extends AppCompatActivity {
     }
     public void makeRequest(String url, ImageView imageView) {
         RequestQueue queue = Volley.newRequestQueue(this);
-        final TextView textView = (TextView) findViewById(R.id.text);
 // Retrieves an image specified by the URL, displays it in the UI.
         ImageRequest request = new ImageRequest(url,
                 new Response.Listener<Bitmap>() {
@@ -52,12 +51,7 @@ public class PublicTransportationActivity extends AppCompatActivity {
                         imageView.setImageBitmap(bitmap);
                     }
                 }, 200,300, null,
-                new Response.ErrorListener() {
-                    public void onErrorResponse(VolleyError error) {
-                        textView.setVisibility(View.VISIBLE);
-                        textView.setText(error.getMessage());
-                    }
-                });
+                null);
         queue.add(request);
     }
     public void createTransportation() {
