@@ -20,16 +20,11 @@ import java.util.function.Consumer;
 
 public class Car extends Transportation {
     private String power;
-    private boolean carPool;
     private double carDistance = 0;
-    public Car(String setType, double setTime, double setDistance, String setPower, boolean setCarPool) {
+    private static double cPoolDistance = 0;
+    public Car(String setType, double setTime, double setDistance) {
         super(setType, setTime, setDistance);
-        power = setPower;
-        carPool = setCarPool;
         carDistance += setDistance;
-    }
-    public boolean didCarpool() {
-        return carPool;
     }
     public String getPower() {
         return power;
@@ -62,6 +57,4 @@ public class Car extends Transportation {
     public String getType() {
         return super.getType();
     }
-
-
 }
