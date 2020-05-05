@@ -4,6 +4,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.media.Image;
 import android.os.Bundle;
@@ -45,6 +46,13 @@ public class CarActivity extends AppCompatActivity {
                     }
                 });
                 builder.create().show();
+            }
+        });
+        Button back = findViewById(R.id.back);
+        back.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                startActivity(new Intent(CarActivity.this, MainActivity.class));
+                //change to the car screen and enter the information
             }
         });
     }
