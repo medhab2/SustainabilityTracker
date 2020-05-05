@@ -3,6 +3,7 @@ package com.example.sustainabilitytracker;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.graphics.Bitmap;
 import android.media.Image;
 import android.os.Bundle;
@@ -36,12 +37,17 @@ public class CarActivity extends AppCompatActivity {
         enter.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 createCar();
-                AlertDialog.Builder builder = new AlertDialog.Builder(getApplicationContext());
-                builder.setMessage("Total Distance Traveled: " + car.getTotalDistance());
-                builder.setOnDismissListener(unused -> {
-                    finish();
+                System.out.println("hi");
+                AlertDialog.Builder builder = new AlertDialog.Builder(CarActivity.this);
+                builder.setMessage("Total Distance Driven: " + car.getTotalDistance() + " miles");
+                builder.setNegativeButton("Close", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                    }
                 });
+                System.out.println("yo");
                 builder.create().show();
+                System.out.println("lol");
             }
         });
     }
