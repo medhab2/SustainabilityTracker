@@ -55,44 +55,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/carType"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="93dp"
-        android:layout_marginLeft="93dp"
-        android:layout_marginTop="386dp"
-        android:layout_marginEnd="105dp"
-        android:layout_marginRight="105dp"
-        android:layout_marginBottom="300dp"
-        android:autofillHints=""
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="@string/enter_electric_gas_etc"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/carCarpool"
-        android:layout_width="248dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="71dp"
-        android:layout_marginLeft="71dp"
-        android:layout_marginTop="537dp"
-        android:layout_marginEnd="92dp"
-        android:layout_marginRight="92dp"
-        android:layout_marginBottom="149dp"
-        android:autofillHints=""
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="@string/did_you_carpool_yes_or_no"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <Button
         android:id="@+id/enterCar"
         android:layout_width="wrap_content"
@@ -106,7 +68,9 @@
         android:text="@string/enter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
