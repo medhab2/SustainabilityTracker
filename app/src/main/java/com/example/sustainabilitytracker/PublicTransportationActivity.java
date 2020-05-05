@@ -11,11 +11,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
-import com.android.volley.VolleyError;
 import com.android.volley.toolbox.ImageRequest;
 import com.android.volley.toolbox.Volley;
 
@@ -46,7 +44,7 @@ public class PublicTransportationActivity extends AppCompatActivity {
                 System.out.println("lol");
             }
         });
-        Button back = findViewById(R.id.back);
+        Button back = findViewById(R.id.backTransit);
         back.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 startActivity(new Intent(PublicTransportationActivity.this, MainActivity.class));
