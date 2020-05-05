@@ -2,6 +2,7 @@ package com.example.sustainabilitytracker;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import android.content.DialogInterface;
 
 import android.graphics.Bitmap;
 import android.os.Bundle;
@@ -30,9 +31,13 @@ public class BikeActivity extends AppCompatActivity {
             public void onClick(View view) {
                 createBike();
                 AlertDialog.Builder builder = new AlertDialog.Builder(getApplicationContext());
-                builder.setMessage("Total Distance Traveled: " + bike.getTotalDistance());
-                builder.setNegativeButton("Close", null);
                 builder.setView(view);
+                builder.setMessage("Total Distance Biked: " + bike.getTotalDistance() + " miles");
+                builder.setNegativeButton("Close", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                    }
+                });
                 builder.create().show();
             }
         });
