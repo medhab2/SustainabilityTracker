@@ -27,18 +27,21 @@ public class BikeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_bike);
         makeRequest();
         Button enter = findViewById(R.id.enterBike);
+        System.out.println("hey");
         enter.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 createBike();
-                AlertDialog.Builder builder = new AlertDialog.Builder(getApplicationContext());
-                builder.setView(view);
+                System.out.println("hi");
+                AlertDialog.Builder builder = new AlertDialog.Builder(BikeActivity.this);
                 builder.setMessage("Total Distance Biked: " + bike.getTotalDistance() + " miles");
                 builder.setNegativeButton("Close", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                     }
                 });
+                System.out.println("yo");
                 builder.create().show();
+                System.out.println("lol");
             }
         });
     }

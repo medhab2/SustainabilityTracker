@@ -1,10 +1,13 @@
 package com.example.sustainabilitytracker;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -23,6 +26,24 @@ public class WalkActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_walk);
         makeRequest();
+        Button enter = findViewById(R.id.enterBike);
+        System.out.println("hey");
+        enter.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                createWalk();
+                System.out.println("hi");
+                AlertDialog.Builder builder = new AlertDialog.Builder(WalkActivity.this);
+                builder.setMessage("Total Distance Walked: " + walk.getTotalDistance() + " miles");
+                builder.setNegativeButton("Close", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                    }
+                });
+                System.out.println("yo");
+                builder.create().show();
+                System.out.println("lol");
+            }
+        });
     }
     public void makeRequest() {
         RequestQueue queue = Volley.newRequestQueue(this);
