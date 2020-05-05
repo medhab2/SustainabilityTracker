@@ -27,7 +27,7 @@ public class WalkActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_walk);
         makeRequest();
-        Button enter = findViewById(R.id.enterBike);
+        Button enter = findViewById(R.id.enterWalk);
         System.out.println("hey");
         enter.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
