@@ -74,17 +74,7 @@ public class CarActivity extends AppCompatActivity {
         EditText editText1 = findViewById(R.id.carDistance);
         String d = editText1.getText().toString();
         double distance = Double.parseDouble(d);
-        EditText editText2 = findViewById(R.id.carType);
-        String power = editText2.getText().toString();
-        EditText editText3 = findViewById(R.id.carCarpool);
-        String cp = editText3.getText().toString().toLowerCase();
-        boolean carpool;
-        if (cp.equals("yes")) {
-            carpool = true;
-        } else {
-            carpool = false;
-        }
-        car = new Car("car", time, distance, power, carpool);
+        car = new Car("car", time, distance);
         System.out.println(car.getDistance() + " " + car.getTime());
     }
 }
